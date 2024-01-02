@@ -1,2 +1,2 @@
 # Aulas-Alura
- Passo a passo programação
+ Passo a passo, iniciando na programação
