@@ -157,3 +157,142 @@ Nessa aula, você aprendeu como:
 
     Adicionar uma pessoa como colaboradora em um repositório no GitHub, e também como aceitar um convite de colaboração recebido.
 
+
+
+Quando você está trabalhando em um projeto grande, principalmente se muitas pessoas estão envolvidas, é comum aparecerem os chamados "conflitos". Mas o que são esses conflitos?
+
+Imagine que o projeto é um grande quebra-cabeça e cada pessoa está trabalhando em uma parte dele. Se duas pessoas tentarem encaixar peças diferentes no mesmo lugar, surge um conflito. No mundo do desenvolvimento de software, isso ocorre quando duas pessoas editam o mesmo pedaço de código de formas diferentes.
+
+Há várias formas de resolver conflitos, podemos utilizar a linha de comando ou o próprio Visual Studio Code. O editor de código fornece mais de uma forma para resolver conflitos de mesclagem entre o código local (o que está na sua máquina) e o remoto(o que está no github, por exemplo).
+
+Uma possibilidade é utilizar a ferramenta “Merge Editor”. Vamos conferir seu funcionamento?
+Resolvendo conflitos no Merge Editor
+
+No exemplo a seguir, nós temos duas versões de um código na branch main: uma no repositório do github e outra modificação diferente no ambiente local. Ao realizarmos o git -push para a branch main, ocorreu um conflito e precisamos resolvê-lo para que a atualização suba para o repositório no github corretamente, como a imagem nos apresenta:
+
+Para solucionarmos o problema, clicamos na opção “Resolve in Merge Editor”, como no print abaixo:
+
+Captura de tela que apresenta um botão com o texto "Resolve in Merge Editor"
+
+Após o clique, somos redirecionados para outra aba que apresenta as modificações no arquivo, vamos entender o que cada opção significa:
+
+Uma captura de tela representando o editor de mesclagem, uma ferramenta usada para resolver conflitos e mesclar versões de código de maneira integrada. Temos uma nova aba chamada "merging: index.html". Há a divisão da tela em três partes: Incoming, Current, Result. No canto inferior direito da tela há um botão "complete merge"
+
+A tela do Visual Studio Code está dividida em três partes:
+
+    Incoming (remoto): modificações que chegam do repositório remoto.
+
+    Current (local): modificações locais.
+
+    Result (resultado): resultado do merge, ou seja, a resolução dos conflitos de mesclagem. É o estado atual do arquivo.
+
+    Os quadrados na cor amarela em volta do código no campo “Incoming” e “Current” são marcadores de conflito: exibem o conteúdo que apresenta conflito no arquivo.
+
+Campo Incoming
+
+-> No campo “Incoming”, acima da linha de código dos marcadores de conflito no campo há outras opções que resultam na alteração do código atual:
+
+    Accept Incoming: aceita modificações oriundas do remoto
+
+Captura de tela com o campo Incoming, Current, e o Result com o código do campo Incoming
+
+    Accept Combination Incoming First: realiza a combinação com as linhas do código do repositório remoto no topo.
+
+Captura de tela com o campo Incoming, Current, e o Result com o código do campo Incoming e Current respectivamente
+
+    Ignore: ignora as modificações.
+
+Campo Current
+
+-> O campo “Current” trabalha com as modificações locais do documento.
+
+    Accept Current: Aceita a modificação local no resultado do documento
+
+    Accept combination Current First: Aceita a combinação local + remoto. Nos resultados a linha de código com a tag <h2> fica antes de <h1>, comprovando que o código local é inserido primeiro que o remoto.
+
+Captura de tela com o campo Incoming, Current, e o Result com o código do campo Current e Incoming respectivamente
+
+    Ignore: ignora as modificações no resultado no final.
+
+Após selecionarmos a opção com o resultado desejado, devemos:
+
+    Salvar o arquivo
+    Clicar no botão “complete Merge”
+    Realizar o commit das modificações
+    Sincronizar as modificações para realizar o push.
+
+Para saber mais:
+
+    Como o Visual Studio facilita o controle de versão com o Git
+
+    Como resolver conflitos de mesclagem no Visual Studio
+
+    Um guia muito útil para mesclar conflitos - em Inglês
+
+
+
+Com o seu projeto aberto no VS Code, altere alguma parte do código e salve o projeto.
+
+Clique no botão lateral esquerdo de Source Control para abrir a integração Git no VS Code. Lá será mostrado quais arquivos contém alterações.
+
+Adicione cada um dos arquivos, clicando no botão de + ao lado do nome de cada um.
+
+Escreva uma mensagem de commit, no devido campo correspondente, descrevendo a alteração feita. Por fim, clique no botão Sync Changes para enviar as alterações para o repositório remoto no GitHub.
+
+
+
+Conflitos em diferentes versões no código é algo comum no cotidiano da pessoa desenvolvedora e é essencial saber como resolver quando esses conflitos aparecem. A ideia do próximo desafio é gerar e resolver um conflito entre um repositório remoto e local, vamos praticar com os desafios não obrigatórios?
+
+Desafios
+
+    Crie um novo repositório local
+    Adicione o repositório remoto criado nos exercícios anteriores ao seu repositório local.
+    Faça uma alteração no repositório local e envie para o remoto.
+    Resolva os conflitos manualmente, escolhendo quais alterações serão mantidas
+    Realize um commit para registrar a resolução do conflito.
+    Verifique quais arquivos foram adicionados
+    Sincronize o repositório local com o repositório remoto no GitHub.
+
+Caso precise de ajuda, opções de solução das atividades estarão disponíveis na seção “Opinião da pessoa instrutora”.
+
+Desafio 1: Criar um Novo Repositório Local
+
+    Abra o terminal.
+    Navegue até o diretório onde deseja criar o novo repositório.
+    Execute git init para inicializar um novo repositório.
+
+Desafio 2: Adicionar o Repositório Remoto Criado Anteriormente
+
+    Execute git remote add <nome-remoto> <url-do-repositorio-remoto> para adicionar o repositório remoto ao seu local.
+
+Desafio 3: Faça uma Alteração no Repositório Local e Envie para o Remoto
+
+    Abra um arquivo existente ou crie um novo no seu repositório local.
+    Faça as alterações desejadas.
+    Execute git add . para adicionar as alterações.
+    Em seguida, execute git commit -m "Alteração no repositório local" para realizar o commit.
+    Utilize git push <nome-remoto> main para enviar as alterações para o repositório remoto.
+
+Desafio 4: Resolvendo Conflitos Manualmente
+
+    No GitHub, faça uma alteração no mesmo arquivo que foi modificado localmente.
+    Execute git pull <nome-remoto> main no seu terminal para trazer as alterações remotas.
+    O Git indicará um conflito. Abra o arquivo afetado e resolva manualmente, escolhendo quais alterações manterá.
+
+    Sugestão: você pode seguir os passos demonstrados no vídeo Resolvendo conflitos
+
+Desafio 5: Realize um Commit para Registrar a Resolução do Conflito
+
+    Após resolver manualmente, execute git add . para adicionar as alterações ao staged area.
+    Em seguida, execute git commit -m "Resolver conflito manualmente de ‘descrição do conflito’" para registrar a resolução do conflito.
+
+Desafio 6: Verifique Quais Arquivos Foram Adicionados
+
+    Execute git status para verificar se há alterações pendentes.
+    Se quiser ver as diferenças, utilize git diff.
+    Conheça mais sobre o comando git diff na documentação git diff
+
+**Desafio 7: Sincronize o Repositório Local com o Repositório Remoto no GitHub**
+
+    Execute git push <nome-remoto> main para enviar as alterações, incluindo a resolução de conflitos, para o repositório remoto no GitHub.
+    Verifique o histórico de commits no GitHub e confirme que o conflito foi resolvido corretamente.
