@@ -1,0 +1,159 @@
+Crie uma conta no GitHub Você pode começar seguindo os passos mostrados no vídeo, preenchendo o formulário de cadastro, verificando sua conta e explorando a página inicial do GitHub.
+
+Criar um novo repositório no GitHub e fazer o upload de um projeto local para esse repositório. Você pode seguir passos mencionados na aula, como acessar as configurações do GitHub, 
+criar um novo repositório com um nome único e escolher se ele será público ou privado. Em seguida, você pode adicionar uma descrição, um README, um .gitignore e uma licença ao repositório.
+
+Instalação do Git: Caso você ainda não tenha realizado a instalação, siga os passos na atividade Faça como eu fiz: instalação do Git
+
+Para criar um repositório local você, digite o seguinte comando no terminal: git init
+
+Para adicionar os arquivos no repositório local, digite no terminal o comando: git add .
+
+Faça um commit com as modificações, digite no terminal o comando: git commit -m "mensagem de commit"
+
+Para configurar a identidade do autor do commit, digite no terminal o comando:
+
+git -config --global user.email "seuemailaqui@example.com"
+git config --global user.name "seu nome aqui"
+
+    Para criar a branch Main, digite no terminal o comando: git branch -M main
+
+    O comando git branch -m é usado para criar uma nova ramificação no repositório Git atual. Neste caso, criamos a branch padrão main, que representa a versão principal do código.
+
+    Para realizar a conexão do seu repositório local com o remoto via SSH, digite no terminal: git remote add origin https://github.com/seunomedeusuario/seu-repositorio.git
+
+    Caso seja necessário, realize a configuração do protocolo SSH através da geração de chave, você pode acompanhar os passos em vídeo na atividade Sincronizando repositórios
+
+    Para subir as alterações no repositório local para o remoto, digite o seguinte comando no terminal: git push -u origin main
+
+    Digite no terminal o comando git status e observe a saída.
+
+O comando git status é uma ferramenta essencial para gerenciar alterações no controle de versão Git. Ele fornece uma visão geral do estado atual do repositório, 
+indicando quais arquivos foram modificados, adicionados ou excluídos desde o último commit. Essa informação é crucial para compreender o progresso do desenvolvimento e tomar decisões de gerenciamento de alterações.
+
+A saída do comando git status geralmente contém três seções principais:
+
+Modificados: Lista os arquivos que foram modificados desde o último commit, mas ainda não foram adicionados à área de preparação (Stage).
+
+Adicionados: Indica os arquivos que foram adicionados à área de preparação, mas ainda não foram confirmados no histórico de commits.
+
+Modificados, adicionados ou excluídos: Exibe os arquivos que não foram rastreados pelo Git, ou seja, que não foram adicionados ao índice de modificações (Staging Area).
+
+Além disso, o comando git status pode fornecer informações adicionais sobre as ramificações atuais, como a ramificação atual e as ramificações que estão à frente ou atrás da atual.
+
+O comando git status é uma ferramenta indispensável para qualquer desenvolvedor que utiliza Git. Ele permite monitorar as alterações no repositório, identificar o estado dos arquivos e 
+tomar decisões de gerenciamento de commits de forma eficiente.
+
+
+Nessa aula, você aprendeu como:
+
+    Criar sua conta no GitHub para poder compartilhar seus projetos de software e/ou colaborar em projetos de outras pessoas;
+
+    Baixar e instalar o Git em seu computador;
+
+    Configurar sua conta do Git em seu computador, com os comandos git config –global user.name e git config –global user.email;
+
+    Criar um repositório remoto no GitHub;
+
+    Criar e conectar seu repositório local com o repositório remoto por meio dos comandos git init, git add, git commit, git remote add e git push.
+
+Para baixar o repositório em seu computador, você deve realizar um clone do projeto através do comando:
+
+git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+
+    Lembre-se de substituir o SEU_USUARIO pelo seu próprio usuário do GitHub e o SEU_REPOSITORIO pelo nome do seu repositório no GitHub.
+
+Caso você já tenha o projeto em seu computador, ao invés de realizar um clone, você pode baixar somente uma atualização dos commits através do comando:
+
+git pull origin main
+
+Depois disso, abra o projeto que você acabou de baixar no VS Code. Altere algo no código, como o limite superior de valores de 10 para 100, nos arquivos de app.js e index.html.
+
+Após salvar as alterações, visualize quais arquivos foram modificados no repositório local com o comando:
+
+git status
+
+Agora, para registrar as alterações feitas, use os comandos a seguir:
+
+git add .
+git commit -m “MENSAGEM”
+
+    Lembre-se de substituir o MENSAGEM, por um texto que descreva brevemente qual alteração você realizou.
+
+Para enviar as alterações feitas para o repositório remoto no GitHub, use o comando a seguir:
+
+git push origin main
+
+Caso você queira verificar se funcionou, basta abrir o seu repositório no GitHub, atualizar a página e o novo commit deverá aparecer por lá. 
+
+Desafio 1: Criar um novo repositório remoto no GitHub e inserir um arquivo.
+
+    Faça login na sua conta do GitHub.
+
+    Clique no sinal de "+" no canto superior direito e escolha "New repository".
+
+    Siga as instruções para criar um novo repositório, dando um nome e uma descrição, se desejar.
+
+    No GitHub, vá para o repositório recém-criado: Clique em "Add file" e escolha a opção que preferir para adicionar um novo arquivo (pode ser um README.md para simplificar).
+
+O print apresenta o campo à direita com as opções goTofile , add file e code. O botão add file está selecionado e aparece uma nova opção na cor azul com o texto "Create new file". 
+
+Desafio 2: Faça um clone do seu repositório remoto para o local.
+
+    Abra o terminal no seu computador.
+    Navegue até o diretório onde deseja clonar o repositório.
+    Execute o comando git clone <url-do-seu-repositorio>.
+
+Desafio 3: Faça uma nova modificação diretamente no GitHub.
+
+    Acesse o seu repositório no GitHub.
+    Abra um arquivo existente ou crie um novo.
+    Faça as alterações desejadas diretamente no GitHub e salve.
+
+Dica: Você pode clicar no arquivo existente e selecionar a opção “Edit this file” (tradução livre para o português: Edite este arquivo)
+
+O print apresenta o campo à esquerda com as opções code e blame. À direita há várias opções, da esquerda para a direita: um campo com o texto ‘Raw’. Um ícone com dois quadrados sobrepostos. Uma seta em um retângulo semiaberto. 
+Um ícone de lápis com o texto acima “Edit this file”. Um ícone com um quadrado e dentro dele um <>
+
+Desafio 4: Atualize seu repositório local a partir do Remoto.
+
+    Navegue até o diretório do seu repositório local usando o terminal.
+    Execute o comando git pull origin main para trazer as últimas alterações do repositório remoto para o seu local.
+
+Desafio 5: Utilize o comando git remote -v no terminal.
+
+    Liste repositórios remotos:
+    No terminal, navegue até o diretório do seu repositório local.
+    Execute git remote -v para listar as entradas remotas configuradas e suas URLs.
+
+O comando é usado para listar todas as entradas remotas configuradas no repositório Git atual. Cada entrada remota é representada por um nome e uma URL. 
+O nome da entrada remota é usado para referenciar outros comandos git, como o git fetch e git push.
+
+Por exemplo, se o seu repositório Git tiver uma entrada remota chamada origin que aponta para o URL https://github.com/meu-usuário/meu-repositório.git, o comando git remote -v exibirá o seguinte:
+
+origin  https://github.com/meu-usuário/meu-repositório.git (fetch)
+origin  https://github.com/meu-usuário/meu-repositório.git (push)
+
+Desafio 6: Confira as mudanças nos arquivos.
+
+    No diretório do seu repositório local, digite no terminal o comando git status para ver arquivos modificados
+
+
+Nessa aula, você aprendeu como:
+
+    Baixar uma cópia de um repositório hospedado no GitHub para o seu computador, utilizando o comando git clone;
+
+    Realizar alterações no código de um projeto e registrá-las com commits, utilizando os comandos git add e git commit;
+
+    Visualizar quais arquivos foram modificados no repositório local, utilizando o comando git status;
+
+    Listar os commits realizados no repositório, com dados do autor, data e mensagem de cada commit, utilizando o comando git log;
+
+    Visualizar os repositórios remotos linkados com o repositório local, utilizando o comando git remote;
+
+    Enviar commits feitos no repositório local para o repositório remoto, utilizando o comando git push;
+
+    Baixar commits do repositório remoto para o repositório local, utilizando o comando git pull;
+
+    Adicionar uma pessoa como colaboradora em um repositório no GitHub, e também como aceitar um convite de colaboração recebido.
+
