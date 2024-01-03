@@ -1,10 +1,3 @@
-Crie uma conta no GitHub Você pode começar seguindo os passos mostrados no vídeo, preenchendo o formulário de cadastro, verificando sua conta e explorando a página inicial do GitHub.
-
-Criar um novo repositório no GitHub e fazer o upload de um projeto local para esse repositório. Você pode seguir passos mencionados na aula, como acessar as configurações do GitHub, 
-criar um novo repositório com um nome único e escolher se ele será público ou privado. Em seguida, você pode adicionar uma descrição, um README, um .gitignore e uma licença ao repositório.
-
-Instalação do Git: Caso você ainda não tenha realizado a instalação, siga os passos na atividade Faça como eu fiz: instalação do Git
-
 Para criar um repositório local você, digite o seguinte comando no terminal: git init
 
 Para adicionar os arquivos no repositório local, digite no terminal o comando: git add .
@@ -44,19 +37,6 @@ Além disso, o comando git status pode fornecer informações adicionais sobre a
 O comando git status é uma ferramenta indispensável para qualquer desenvolvedor que utiliza Git. Ele permite monitorar as alterações no repositório, identificar o estado dos arquivos e 
 tomar decisões de gerenciamento de commits de forma eficiente.
 
-
-Nessa aula, você aprendeu como:
-
-    Criar sua conta no GitHub para poder compartilhar seus projetos de software e/ou colaborar em projetos de outras pessoas;
-
-    Baixar e instalar o Git em seu computador;
-
-    Configurar sua conta do Git em seu computador, com os comandos git config –global user.name e git config –global user.email;
-
-    Criar um repositório remoto no GitHub;
-
-    Criar e conectar seu repositório local com o repositório remoto por meio dos comandos git init, git add, git commit, git remote add e git push.
-
 Para baixar o repositório em seu computador, você deve realizar um clone do projeto através do comando:
 
 git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
@@ -67,60 +47,15 @@ Caso você já tenha o projeto em seu computador, ao invés de realizar um clone
 
 git pull origin main
 
-Depois disso, abra o projeto que você acabou de baixar no VS Code. Altere algo no código, como o limite superior de valores de 10 para 100, nos arquivos de app.js e index.html.
-
-Após salvar as alterações, visualize quais arquivos foram modificados no repositório local com o comando:
-
-git status
-
-Agora, para registrar as alterações feitas, use os comandos a seguir:
-
-git add .
-git commit -m “MENSAGEM”
-
-    Lembre-se de substituir o MENSAGEM, por um texto que descreva brevemente qual alteração você realizou.
-
 Para enviar as alterações feitas para o repositório remoto no GitHub, use o comando a seguir:
 
 git push origin main
 
 Caso você queira verificar se funcionou, basta abrir o seu repositório no GitHub, atualizar a página e o novo commit deverá aparecer por lá. 
 
-Desafio 1: Criar um novo repositório remoto no GitHub e inserir um arquivo.
-
-    Faça login na sua conta do GitHub.
-
-    Clique no sinal de "+" no canto superior direito e escolha "New repository".
-
-    Siga as instruções para criar um novo repositório, dando um nome e uma descrição, se desejar.
-
-    No GitHub, vá para o repositório recém-criado: Clique em "Add file" e escolha a opção que preferir para adicionar um novo arquivo (pode ser um README.md para simplificar).
-
-O print apresenta o campo à direita com as opções goTofile , add file e code. O botão add file está selecionado e aparece uma nova opção na cor azul com o texto "Create new file". 
-
-Desafio 2: Faça um clone do seu repositório remoto para o local.
-
-    Abra o terminal no seu computador.
-    Navegue até o diretório onde deseja clonar o repositório.
-    Execute o comando git clone <url-do-seu-repositorio>.
-
-Desafio 3: Faça uma nova modificação diretamente no GitHub.
-
-    Acesse o seu repositório no GitHub.
-    Abra um arquivo existente ou crie um novo.
-    Faça as alterações desejadas diretamente no GitHub e salve.
-
 Dica: Você pode clicar no arquivo existente e selecionar a opção “Edit this file” (tradução livre para o português: Edite este arquivo)
 
-O print apresenta o campo à esquerda com as opções code e blame. À direita há várias opções, da esquerda para a direita: um campo com o texto ‘Raw’. Um ícone com dois quadrados sobrepostos. Uma seta em um retângulo semiaberto. 
-Um ícone de lápis com o texto acima “Edit this file”. Um ícone com um quadrado e dentro dele um <>
-
-Desafio 4: Atualize seu repositório local a partir do Remoto.
-
-    Navegue até o diretório do seu repositório local usando o terminal.
-    Execute o comando git pull origin main para trazer as últimas alterações do repositório remoto para o seu local.
-
-Desafio 5: Utilize o comando git remote -v no terminal.
+Utilize o comando git remote -v no terminal.
 
     Liste repositórios remotos:
     No terminal, navegue até o diretório do seu repositório local.
@@ -133,31 +68,6 @@ Por exemplo, se o seu repositório Git tiver uma entrada remota chamada origin q
 
 origin  https://github.com/meu-usuário/meu-repositório.git (fetch)
 origin  https://github.com/meu-usuário/meu-repositório.git (push)
-
-Desafio 6: Confira as mudanças nos arquivos.
-
-    No diretório do seu repositório local, digite no terminal o comando git status para ver arquivos modificados
-
-
-Nessa aula, você aprendeu como:
-
-    Baixar uma cópia de um repositório hospedado no GitHub para o seu computador, utilizando o comando git clone;
-
-    Realizar alterações no código de um projeto e registrá-las com commits, utilizando os comandos git add e git commit;
-
-    Visualizar quais arquivos foram modificados no repositório local, utilizando o comando git status;
-
-    Listar os commits realizados no repositório, com dados do autor, data e mensagem de cada commit, utilizando o comando git log;
-
-    Visualizar os repositórios remotos linkados com o repositório local, utilizando o comando git remote;
-
-    Enviar commits feitos no repositório local para o repositório remoto, utilizando o comando git push;
-
-    Baixar commits do repositório remoto para o repositório local, utilizando o comando git pull;
-
-    Adicionar uma pessoa como colaboradora em um repositório no GitHub, e também como aceitar um convite de colaboração recebido.
-
-
 
 Quando você está trabalhando em um projeto grande, principalmente se muitas pessoas estão envolvidas, é comum aparecerem os chamados "conflitos". Mas o que são esses conflitos?
 
@@ -221,78 +131,6 @@ Após selecionarmos a opção com o resultado desejado, devemos:
     Realizar o commit das modificações
     Sincronizar as modificações para realizar o push.
 
-Para saber mais:
+Uma das maneiras de dar um "reset" no seu código é utilizar o comando git reset com a opção --hard, que define o modo como o reset será realizado. Entretanto, essa não é a única forma de uso desse comando.
 
-    Como o Visual Studio facilita o controle de versão com o Git
-
-    Como resolver conflitos de mesclagem no Visual Studio
-
-    Um guia muito útil para mesclar conflitos - em Inglês
-
-
-
-Com o seu projeto aberto no VS Code, altere alguma parte do código e salve o projeto.
-
-Clique no botão lateral esquerdo de Source Control para abrir a integração Git no VS Code. Lá será mostrado quais arquivos contém alterações.
-
-Adicione cada um dos arquivos, clicando no botão de + ao lado do nome de cada um.
-
-Escreva uma mensagem de commit, no devido campo correspondente, descrevendo a alteração feita. Por fim, clique no botão Sync Changes para enviar as alterações para o repositório remoto no GitHub.
-
-
-
-Conflitos em diferentes versões no código é algo comum no cotidiano da pessoa desenvolvedora e é essencial saber como resolver quando esses conflitos aparecem. A ideia do próximo desafio é gerar e resolver um conflito entre um repositório remoto e local, vamos praticar com os desafios não obrigatórios?
-
-Desafios
-
-    Crie um novo repositório local
-    Adicione o repositório remoto criado nos exercícios anteriores ao seu repositório local.
-    Faça uma alteração no repositório local e envie para o remoto.
-    Resolva os conflitos manualmente, escolhendo quais alterações serão mantidas
-    Realize um commit para registrar a resolução do conflito.
-    Verifique quais arquivos foram adicionados
-    Sincronize o repositório local com o repositório remoto no GitHub.
-
-Caso precise de ajuda, opções de solução das atividades estarão disponíveis na seção “Opinião da pessoa instrutora”.
-
-Desafio 1: Criar um Novo Repositório Local
-
-    Abra o terminal.
-    Navegue até o diretório onde deseja criar o novo repositório.
-    Execute git init para inicializar um novo repositório.
-
-Desafio 2: Adicionar o Repositório Remoto Criado Anteriormente
-
-    Execute git remote add <nome-remoto> <url-do-repositorio-remoto> para adicionar o repositório remoto ao seu local.
-
-Desafio 3: Faça uma Alteração no Repositório Local e Envie para o Remoto
-
-    Abra um arquivo existente ou crie um novo no seu repositório local.
-    Faça as alterações desejadas.
-    Execute git add . para adicionar as alterações.
-    Em seguida, execute git commit -m "Alteração no repositório local" para realizar o commit.
-    Utilize git push <nome-remoto> main para enviar as alterações para o repositório remoto.
-
-Desafio 4: Resolvendo Conflitos Manualmente
-
-    No GitHub, faça uma alteração no mesmo arquivo que foi modificado localmente.
-    Execute git pull <nome-remoto> main no seu terminal para trazer as alterações remotas.
-    O Git indicará um conflito. Abra o arquivo afetado e resolva manualmente, escolhendo quais alterações manterá.
-
-    Sugestão: você pode seguir os passos demonstrados no vídeo Resolvendo conflitos
-
-Desafio 5: Realize um Commit para Registrar a Resolução do Conflito
-
-    Após resolver manualmente, execute git add . para adicionar as alterações ao staged area.
-    Em seguida, execute git commit -m "Resolver conflito manualmente de ‘descrição do conflito’" para registrar a resolução do conflito.
-
-Desafio 6: Verifique Quais Arquivos Foram Adicionados
-
-    Execute git status para verificar se há alterações pendentes.
-    Se quiser ver as diferenças, utilize git diff.
-    Conheça mais sobre o comando git diff na documentação git diff
-
-**Desafio 7: Sincronize o Repositório Local com o Repositório Remoto no GitHub**
-
-    Execute git push <nome-remoto> main para enviar as alterações, incluindo a resolução de conflitos, para o repositório remoto no GitHub.
-    Verifique o histórico de commits no GitHub e confirme que o conflito foi resolvido corretamente.
+Você pode encontrar as outras opções do comando git reset na documentação oficial do git.
